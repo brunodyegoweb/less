@@ -1,0 +1,46 @@
+@cor1: blue;
+@cor2: red;
+@cor3: green;
+@cor-fundo: red;
+@cor-ff: #7a7b7c;
+@tamanho: 13px;
+
+body{
+    background-color: @cor-ff;
+}
+h1{
+    color: if(iscolor(@cor2), @cor2, yellow);
+    .drop-shadow();
+}
+
+h2{
+    color: @cor1;
+    background-color: @cor-fundo;
+    .drop-shadow();
+}
+p{
+    color: @cor1;
+    b{
+        color: @cor2;
+        }
+}
+
+#div-1{
+    font-size: @tamanho;
+    color: @cor3;
+}
+
+#div-2{
+    font-size: @tamanho+5;
+    color: @cor3+22;
+}
+
+#div-3{
+    font-size: @tamanho+10;
+    color: @cor3*1.8;
+}
+
+.drop-shadow(){
+    text-shadow: 2px 1px 1px #ccc;
+    text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+@cor: blue;
+@cor2: rgb(210,212,208);
+@t: 15px;
+
+body{
+    background-color: @cor2;
+}
+
+
+h1{
+    .cores('h1');
+}
+
+p{
+    .cores('p');
+}
+
+.cores(@tag){
+    color: @cor*0.8;
+    & when (@tag ='p'){
+        font-size: @t * 1.5px;
+    }
+    & when (@tag = 'h1'){
+        text-shadow: 2px 1px 1px #7a7b7c;
+        font-size: @t*4.5px;
+    }
+}

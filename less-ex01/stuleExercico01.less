@@ -1,0 +1,69 @@
+@cor: blue;
+@cor: red;
+@cor: green;
+@tamanho: 20px;
+@width: 0.75;
+
+.drop-shadow(){
+    text-shadow: 2px 1px #ccc;
+    text-decoration: underline;
+}
+
+body{
+    background-color: rgb(210,212,208);
+    width: percentage(@width);
+    margin-left: 10%;
+}
+
+.drop-shadow1(@color: darkgreen, @backgroudColor: rgb(139,74,125)){
+    & when (@color=''){
+        color:rgb(165,33,0);
+    }
+    text-shadow: 2px 1px 1px #ccc;
+    text-decoration: underline;
+    background-color: @backgroudColor;
+}
+
+h1{
+    .drop-shadow();
+    color: @cor2;
+}
+
+h2{
+    .drop-shadow1('', #fff)
+}
+
+p{
+    color: @cor;
+        b{
+            color:@cor2
+        }
+}
+
+b{
+    color:@color2 - rgb(50,50,50)
+}
+
+#div-1{
+    font-size: @tamanho;
+}
+
+#div-2{
+    font-size: @tamanho+5;
+    color: @cor3+12;
+}
+
+#div-2{
+    font-size: @tamanho+10;
+    color: @cor3*1.8;
+}
+
+a.button:link, a.button:visited, a{
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    width: 15%
+}
